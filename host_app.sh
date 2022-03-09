@@ -3,7 +3,7 @@
 
 # --- Function to colour the output message
 # GREEN="\033[0;32m"
-# RED="\033[0;32m"
+# RED="\033[0;31m"
 NO_COLOR="\033[0m"
 
 function print_message(){
@@ -26,7 +26,7 @@ function check_service_status(){
         print_message "GREEN" "$1 service is active."
     else
         print_message "RED" "$1 service inactive"
-        # exit 1
+        exit 1
     fi
 }
 
@@ -111,3 +111,6 @@ sudo sed -i 's/172.20.1.101/localhost/g' /var/www/html/index.php
 # --- Test
 print_message "GREEN" "All set"
 # curl http://localhost
+
+# --- Git Token
+# --- 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
